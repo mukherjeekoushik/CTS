@@ -1,0 +1,73 @@
+<html>
+<head><title></title>
+<script type="text/javascript">
+function check()
+{
+var ecode=document.forms.frm1.t1.value;
+var ename=document.forms.frm1.t2.value;
+var eage=document.forms.frm1.t3.value;
+var eemail=document.forms.frm1.t4.value;
+var esal=document.forms.frm1.t5.value;
+
+if(ecode=="")
+{
+alert("employee code cannot be blank.......");
+return false;
+}
+if(ename=="")
+{
+alert("employee name cannot be blank.......");
+return false;
+}
+if(eage=="")
+{
+alert("employee age cannot be blank.......");
+return false;
+}
+if(eage<0)
+{
+alert("age cannot be negative.......");
+return false;
+}
+if(eemail=="")
+{
+alert("employee emailId cannot be blank.......");
+return false;
+}
+
+var atpos = eemail.indexOf("@");
+var dotpos = eemail.lastIndexOf(".");
+      
+if(atpos < 1 || (dotpos - atpos < 2))
+{
+alert("invalid email Id format.......");
+return false;
+}
+if(esal=="")
+{
+alert("employee salary cannot be blank.......");
+return false;
+}
+if(esal<0)
+{
+alert("salary cannot be negative.......");
+return false;
+}
+
+}
+
+</script>
+</head>
+<body>
+<form id="frm1" name="frm1" action="ValidationServer.jsp" method="post" onsubmit="return check()">
+<table>
+<tr><td>Employee Code</td><td><input type="text" name="t1"></td></tr>
+<tr><td>Employee Name</td><td><input type="text" name="t2"></td></tr>
+<tr><td>Present Age</td><td><input type="text" name="t3"></td></tr>
+<tr><td>Email Id</td><td><input type="text" name="t4"></td></tr>
+<tr><td>Salary</td><td><input type="text" name="t5"></td></tr>
+<tr><td colspan="2" align="right"><input type="submit" value="Save"></td></tr>
+</table>
+</form>
+</body>
+</html>

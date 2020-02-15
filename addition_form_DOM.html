@@ -1,0 +1,25 @@
+<html>
+<head><title></title>
+<script type="text/javascript">
+function summation()
+{
+var n1=document.getElementById('t1').value;
+var n2=document.getElementById('t2').value;
+var sum=parseInt(n1)+parseInt(n2);
+alert("Summation: "+sum);
+document.getElementById("p").innerHTML="Summation: "+sum;
+}
+
+</script>
+</head>
+<body>
+<form id="frm1" name="frm1">
+<table>
+<tr><td>Enter First number</td><td><input type="text" id="t1"></td></tr>
+<tr><td>Enter Second number</td><td><input type="text" id="t2"></td></tr>
+<tr><td colspan="2" align="center"><div id="p"></div></td></tr>
+<tr><td colspan="2" align="right"><input type="button" value="Addition" onclick="summation()"></td></tr>
+</table>
+</form>
+</body>
+</html>
